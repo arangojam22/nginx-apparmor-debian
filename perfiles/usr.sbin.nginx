@@ -1,0 +1,32 @@
+# Last Modified: Thu Nov 19 16:48:29 2026
+abi <abi/4.0>,
+
+include <tunables/global>
+
+/usr/sbin/nginx {
+  include <abstractions/apache2-common>
+  include <abstractions/base>
+  include <abstractions/web-data>
+
+  capability dac_override,
+  capability net_bind_service,
+  capability setgid,
+  capability setuid,
+
+  /usr/sbin/nginx mr,
+  /var/log/nginx/access.log w,
+  /var/log/nginx/error.log w,
+  owner /etc/group r,
+  owner /etc/nginx/conf.d/ r,
+  owner /etc/nginx/mime.types r,
+  owner /etc/nginx/modules-enabled/ r,
+  owner /etc/nginx/nginx.conf r,
+  owner /etc/nginx/sites-available/default r,
+  owner /etc/nginx/sites-enabled/ r,
+  owner /etc/nsswitch.conf r,
+  owner /etc/passwd r,
+  owner /proc/sys/kernel/random/boot_id r,
+  owner /run/nginx.pid rw,
+  owner /run/systemd/userdb/ r,
+
+}
