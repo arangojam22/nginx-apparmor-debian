@@ -166,7 +166,4 @@ Las abstracciones facilitan generar el perfil, pero pueden aportar permisos ajen
 
 La respuesta HTTP 200 acredita el funcionamiento probado, no una auditoría completa ni que la política sea mínima.
 
-## Archivos y pendientes
-Las once capturas están en evidencias/. Las carpetas configuracion/ y perfiles/ están reservadas para los archivos reales; capturas/ no se utiliza actualmente.
 
-Para cerrar completamente la entrega falta adjuntar el perfil final exacto y el registro original de auditoría. También conviene ampliar la captura de aa-status hasta mostrar Nginx en la sección correspondiente.
